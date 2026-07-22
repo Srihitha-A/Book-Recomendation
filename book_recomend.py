@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd 
 import pickle
 
-books= pd.read_excel(r"C:\Users\Suman\Downloads\books.xlsx")
+books= pd.read_excel("books.xlsx")
 
 indices = pd.Series(books.index, index=books["title"].str.lower()).drop_duplicates()
 with open('titles.pkl', 'rb') as file:
